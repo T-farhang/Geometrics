@@ -9,20 +9,21 @@ package geometrics;
  *
  * @author Totia
  */
-public abstract class SimpleGeometric {
+public abstract class SimpleGeometric<E> {
 
     private String color = "white";
     private boolean filled;
     private java.util.Date dateCreated;
+    private String name;
 
     protected SimpleGeometric() {
         dateCreated = new java.util.Date();
     }
 
-    protected SimpleGeometric(String color, boolean filled) {
+    protected SimpleGeometric(String color, String name) {
         dateCreated = new java.util.Date();
         this.color = color;
-        this.filled = filled;
+        this.name = name;
     }
 
     public String getColor() {
@@ -44,13 +45,19 @@ public abstract class SimpleGeometric {
     public java.util.Date getDateCreated() {
         return dateCreated;
     }
-    
-    public  abstract double getArea();
-    
-    public abstract void name();
-    
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public abstract double getArea();
+
     public String toString() {
         return "created on " + dateCreated + "\ncolor: " + color
-                + " and filled: " + filled;
+                + " and name: " + name;
     }
 }

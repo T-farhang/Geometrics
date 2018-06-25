@@ -20,10 +20,10 @@ public class Square extends SimpleGeometric {
         this.side = side;
     }
 
-    public Square(double side, String color, boolean filled) {
+    public Square(double side, String color, String name) {
         this.side = side;
         setColor(color);
-        setFilled(filled);
+        setName(name);
     }
 
     public double getSide() {
@@ -42,13 +42,9 @@ public class Square extends SimpleGeometric {
         return side * 4;
     }
 
-    public void name() {
-        System.out.print("Square");
-    }
-
     @Override
     public String toString() {
-        return "Square : " + "side= " + side + " and area is " + this.getArea();
+        return "Square : " + this.getName() + " , side= " + side + " and area is " + this.getArea();
     }
 
 }

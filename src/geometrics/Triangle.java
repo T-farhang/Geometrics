@@ -23,11 +23,11 @@ public class Triangle extends SimpleGeometric {
         this.height = height;
     }
 
-    public Triangle(double width, double height, String color, boolean filled) {
+    public Triangle(double width, double height, String color, String name) {
         this.width = width;
         this.height = height;
         setColor(color);
-        setFilled(filled);
+        setName(name);
     }
 
     public double getHeight() {
@@ -68,7 +68,7 @@ public class Triangle extends SimpleGeometric {
 
     @Override
     public String toString() {
-        return "Triangle : " + "width= " + width + ", height=" + height + " and area is " + this.getArea();
+        return "Triangle : " + this.getName() + " , width= " + width + ", height=" + height + " and area is " + this.getArea();
     }
 
 }

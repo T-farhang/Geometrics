@@ -23,11 +23,11 @@ public class Parallelogram extends SimpleGeometric {
         this.width = width;
     }
 
-    public Parallelogram(double width, double height, String color, boolean filled) {
+    public Parallelogram(double width, double height, String color, String name) {
         this.width = width;
         this.height = height;
         setColor(color);
-        setFilled(filled);
+        setName(name);
     }
 
     public double getHeight() {
@@ -62,13 +62,9 @@ public class Parallelogram extends SimpleGeometric {
         return (s1 + s2) * 2;
     }
 
-    public void name() {
-        System.out.print("Prallelogram");
-    }
-
     @Override
     public String toString() {
-        return "Parallelgram : " + "width= " + width + ", height=" + height + " and area is " + this.getArea();
+        return "Parallelgram : " + this.getName() + " , width= " + width + ", height=" + height + " and area is " + this.getArea();
     }
 
 }

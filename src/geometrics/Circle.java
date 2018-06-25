@@ -20,10 +20,10 @@ public class Circle extends SimpleGeometric {
         this.radius = radius;
     }
 
-    public Circle(double radius, String color, boolean filled) {
+    public Circle(double radius, String color, String name) {
         this.radius = radius;
         setColor(color);
-        setFilled(filled);
+        setName(name);
     }
 
     public double getRadius() {
@@ -51,13 +51,9 @@ public class Circle extends SimpleGeometric {
                 + " and the radius is " + radius);
     }
 
-    public void name() {
-        System.out.print("Circle");
-    }
-
     @Override
     public String toString() {
-        return "Circle : " + "radius= " + radius + " and area is " + this.getArea();
+        return "Circle : " + this.getName() + " , radius= " + radius + " and area is " + this.getArea();
     }
 
 }

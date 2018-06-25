@@ -20,9 +20,9 @@ public class Cube extends SimpleGeometric {
         this.side = side;
     }
 
-    public Cube(double side, String color, boolean filled) {
+    public Cube(double side, String color, String name) {
         setColor(color);
-        setFilled(filled);
+        setName(name);
         this.side = side;
     }
 
@@ -42,14 +42,9 @@ public class Cube extends SimpleGeometric {
         return side * side * side;
     }
 
-    public void name() {
-        String[] n = new String[2];
-        System.out.print("Cube");
-    }
-
     @Override
     public String toString() {
-        return "Cube : " + "side= " + side + " and area is " + this.getArea();
+        return "Cube :" + this.getName() + ", side = " + side + " and area is " + this.getArea();
     }
 
 }

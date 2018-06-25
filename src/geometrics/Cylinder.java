@@ -22,9 +22,9 @@ public class Cylinder extends SimpleGeometric {
         this.height = height;
     }
 
-    public Cylinder(double radius, double height, String color, boolean filled) {
+    public Cylinder(double radius, double height, String color, String name) {
         setColor(color);
-        setFilled(filled);
+        setName(name);
         this.radius = radius;
         this.height = height;
     }
@@ -53,13 +53,9 @@ public class Cylinder extends SimpleGeometric {
         return radius * radius * Math.PI * height;
     }
 
-    public void name() {
-        System.out.print("Cylinder");
-    }
-
     @Override
     public String toString() {
-        return "Cylinder : " + "radius= " + radius + ", height=" + height + " and area is " + this.getArea();
+        return "Cylinder : " + this.getName() + " ,radius= " + radius + ", height=" + height + " and area is " + this.getArea();
     }
 
 }

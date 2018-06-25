@@ -22,11 +22,11 @@ public class Rectangle extends SimpleGeometric {
         this.height = height;
     }
 
-    public Rectangle(double width, double height, String color, boolean filled) {
+    public Rectangle(double width, double height, String color, String name) {
         this.width = width;
         this.height = height;
         setColor(color);
-        setFilled(filled);
+        setName(name);
     }
 
     public double getWidth() {
@@ -53,13 +53,9 @@ public class Rectangle extends SimpleGeometric {
         return 2 * (width + height);
     }
 
-    public void name() {
-        System.out.print("Rectangle");
-    }
-
     @Override
     public String toString() {
-        return "Rectangle : " + "width= " + width + ", height=" + height + " and area is " + this.getArea();
+        return "Rectangle : " + this.getName() +" , width= " + width + ", height=" + height + " and area is " + this.getArea();
     }
 
 }
